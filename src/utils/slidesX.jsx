@@ -1,5 +1,5 @@
 export const slidesX = {
-    slidesPerView:5,
+    slidesPerView:3,
     spaceBetween:50,
     breakpoints:{
         480:{
@@ -12,7 +12,7 @@ export const slidesX = {
          slidesPerView:3
         },
         1180:{
-         slidesPerView:5
+         slidesPerView:3
         },
        }
 }

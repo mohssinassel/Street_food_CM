@@ -1,7 +1,10 @@
 :root {
   --color-primary: #f9f9f9;
   --color-secondary: #000000;
+  --div-color:rgb(244, 242, 238);
 
 
 }
-
+body{
+  background-color: var(--div-color);
+}
