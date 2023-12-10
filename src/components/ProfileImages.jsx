@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import "../styles/ProfileImages.css";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
+
+
+// import required modules
+import { EffectCards } from 'swiper/modules';
+
 function ProfileImages() {
 
     const [picDisplayed, setPicDisplayed] = useState("/images/pic_vendor4.jpg");
@@ -8,24 +19,33 @@ function ProfileImages() {
 
     return (
         <>
-        <div className='profile_img_left'>
-            <img src={picDisplayed} alt="pic_vendor" className='image_profil_main' />
-        </div>
-        <div className='profile_img_right'>
-            <div onClick={() => setPicDisplayed("/images/pic_vendor1.jpg")} className={` ${picDisplayed === "/images/pic_vendor1.jpg" ? 'selected' : ''}`}>
-                <img src="/images/pic_vendor1.jpg" alt="pic_vendor" className='image_profil' />
+        <div className='profil_information_container'>
+        <div className='profil_information'>
+                <h1>Hi, Mohssin Assel</h1>
+                <p>Welcome to Your Awesome Profile Space</p>
+                <h2 className='store_name'>Corn Haven</h2>
+              
             </div>
-            <div onClick={() => setPicDisplayed("/images/pic_vendor2.jpg")} className={` ${picDisplayed === "/images/pic_vendor2.jpg" ? 'selected' : ''}`}>
-                <img src="/images/pic_vendor2.jpg" alt="pic_vendor" className='image_profil' />
-            </div>
-            <div onClick={() => setPicDisplayed("/images/pic_vendor3.jpg")} className={` ${picDisplayed === "/images/pic_vendor3.jpg" ? 'selected' : ''}`}>
-                <img src="/images/pic_vendor3.jpg" alt="pic_vendor" className='image_profil' />
-            </div>
-            <div onClick={() => setPicDisplayed("/images/pic_vendor4.jpg")} className={` ${picDisplayed === "/images/pic_vendor4.jpg" ? 'selected' : ''}`}>
-                <img src="/images/pic_vendor4.jpg" alt="pic_vendor" className='image_profil' />
-            </div>
-        </div>
-        </>
+            <span class="vertical-line"></span>
+            <div className='profil_img_container' >
+                    <Swiper
+                     
+                effect={'cards'}
+                grabCursor={true}
+                
+                modules={[EffectCards]}
+                className="mySwiper"
+            >
+            
+            <SwiperSlide className='swiperSlide1'><img src="/images/pic_vendor4.jpg" alt="" className='image_profil'/></SwiperSlide>
+            <SwiperSlide className='swiperSlide1'><img src="/images/pic_vendor2.jpg" alt="" className='image_profil'/></SwiperSlide>
+            <SwiperSlide className='swiperSlide1'><img src="/images/pic_vendor3.jpg" alt="" className='image_profil'/></SwiperSlide>
+            <SwiperSlide className='swiperSlide1'><img src="/images/pic_vendor1.jpg" alt="" className='image_profil'/></SwiperSlide>
+
+        </Swiper>
+      </div>
+      </div>
+    </>
     )
 }
 export default ProfileImages;

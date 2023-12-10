@@ -26,9 +26,70 @@
     height: 400px;
 }
 .image_profil{
-    width: 150px;
-    height: 200px;   
+    width: 240px;
+    height: 320px;   
     border-radius:5px ; 
    
 
+}
+.profil_information_container{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    border: #ccc 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100%;
+    background-color: #fff;
+    width: 100%;
+}
+.profil_information{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 100%;
+    background-color: #fff;
+    width: 50%;
+}
+
+.profil_img_container{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    
+    
+}
+.mySwiper {
+    width: 240px;
+    height: 320px;
+}
+  
+.swiperSlide1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.vertical-line{
+    border-left: 2px solid #888888;
+    display: inline-block;
+    height: 130px;
+    margin: 0 20px;
+}
+.store_name{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    font-family: 'Silkscreen', sans-serif;
 }

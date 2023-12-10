@@ -10,26 +10,44 @@ export const vendor =[
     "rate_store": 1,
     "menu": [{
         "id_plat": 1,
-        "name_plat": "Pizza Margherita",
-        "price": 12.99,
-        "categorie": "Pizza"
+        "name_plat": "cheddar Bacon Ranch Corn",
+        "price": 9.99,
+        "categorie": "Corn",
+        "image":"/images/menu/cheddarBaconRanchCorn.jpg"
       },
       {
         "id_plat": 2,
-        "name_plat": "Burger Classic",
-        "price": 9.99,
-        "categorie": "Burger"
+        "name_plat": "Classic Grilled Corn",
+        "price": 5.99,
+        "categorie": "Corn",
+        "image":"/images/menu/ClassicGrilledCorn.jpg"
       },
       {
         "id_plat": 3,
-        "name_plat": "Salade César",
+        "name_plat": "Garlic Parmesan Corn",
         "price": 8.49,
-        "categorie": "Salade"
-      }],
+        "categorie": "Corn",
+        "image":"/images/menu/GarlicParmesanCorn.jpg"
+      },
+      {
+        "id_plat": 4,
+        "name_plat": "Honey Buffer Corn",
+        "price": 9.49,
+        "categorie": "Corn",
+        "image":"/images/menu/HoneyBufferCorn.jpg"
+      },
+      {
+        "id_plat": 5,
+        "name_plat": "Spicy Chili Lime Corn",
+        "price": 7.99,
+        "categorie": "Corn",
+        "image":"/images/menu/SpicyChiliLimeCorn.jpg"
+      },
+    ],
       "day_offre":
         {
-          "name_offre": "Pizza Margherita",
-          "price": 8.99
+          "name_offre": "Honey Buffer Corn",
+          "price": 7.49
         }
   },
   {

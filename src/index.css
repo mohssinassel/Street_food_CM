@@ -1,7 +1,11 @@
 :root {
-  --color-primary: #f9f9f9;
-  --color-secondary: #000000;
+  --color-primary: #8d0404;
+  --color-secondary: rgb(11, 88, 7);
+  --color-secondary-opacity: rgba(11, 88, 7, 0.364);
+  --color-secondary-opacity-little: rgba(11, 88, 7, 0.604);
+
   --div-color:rgb(244, 242, 238);
+
 
 
 }
