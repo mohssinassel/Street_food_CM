@@ -1,0 +1,12 @@
+
+#three-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ddd;
+    margin: auto; /* Center horizontally */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  

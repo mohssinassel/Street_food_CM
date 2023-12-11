@@ -10,11 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.91.0",
+    "gltf-loader": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-paginate": "^8.2.0",
-    "swiper": "^11.0.5"
+    "react-three-fiber": "^6.0.13",
+    "styled-components": "^6.1.1",
+    "swiper": "^11.0.5",
+    "three": "^0.159.0",
+    "three-orbitcontrols": "^2.110.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

@@ -1,0 +1,48 @@
+.menuItem2{
+    
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuItem2:hover{
+    border-top: 3px solid black;
+}
+.menuItem2:hover .img_menu {
+    display: block;
+}
+
+
+.img_menu{
+    display: none;
+    margin-right: 10px;
+    transition: all 2s ;
+}
+
+.menuItem2 div {
+    border-radius: 10px;
+    width: 150px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.menuItem2 p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 ;
+    padding: 0.5rem;
+    flex: 1;
+}
+.img_cont_menu{
+    display: flex;
+    flex: 2;
+    align-items: center;
+}
