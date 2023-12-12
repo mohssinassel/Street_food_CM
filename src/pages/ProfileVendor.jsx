@@ -1,17 +1,16 @@
 import React,{useState} from 'react';
 import '../styles/ProfileVendor.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { slidesX } from '../utils/slidesX';
 import "swiper/css"; // Update the import path
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { vendor } from '../utils/vendor';
 import ProfileImages from '../components/ProfileImages';
-import MenuItem from '../components/MenuItem';
 import MenuItem2 from '../components/menuItem2';
-import ReactPaginate from "react-paginate";
+
 import "../styles/pagination.css";
 import ProfileVendorInfo from '../components/ProfileVendorInfo';
+import Discount from '../components/Discount';
+import AddPlat from '../components/AddPlat';
 
 
 function ProfileVendor() {
@@ -56,14 +55,14 @@ function ProfileVendor() {
                   ))}
                 </div>
             </div>
-            <div>
-              
-            </div>
+            <Discount/>
+            
           </div>
           <div className='profile_container_right'>
               <ProfileVendorInfo/>
           </div>
         </div>
+        
         
       </>
     )

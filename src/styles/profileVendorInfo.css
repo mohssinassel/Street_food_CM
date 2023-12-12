@@ -6,12 +6,44 @@
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    /* border: 1px solid #ccc; */
-   
-    /* background-color: #fff; */
-    border-radius: 0.5rem;
+    border-radius: 0.5rem;   
+}
+
+.vendor_info_div{
+    cursor: pointer;
+}
+
+.vendor_info_div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+    
+    margin: 0;
+}
+.vendor_info_div:hover .icon_modif{
+    display: block;
+
+}
+.vendor_info_div:hover hr{
+    border: 0.06rem solid #000000;
+
+}
+
+
+
+
+.vendor_info_div > div > p{
+    margin: 0;
     
 }
+.icon_modif{
+    display: none;
+    transition: all 2s;
+    margin-right: 20px;
+    
+}
+
 h2{
     margin: 0 auto;
     padding: 0.5rem;
@@ -24,6 +56,7 @@ hr{
     width: 90%;
     margin: 0 auto;
     border: 0.05rem solid #ccc;
+    transition: all 0.5s;
 }
 p{
     margin: 0 auto;
@@ -40,12 +73,15 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto;
+    
     width: 100%;
-    height: 100%;
+    height: 90%;
+    margin-top: 100px;
 }
 .btnPassFun{
     margin: 0 auto;
+    margin-top: 10px ;
+
     padding: 0.5rem;
     border: none;
     border-radius: 0.5rem;
@@ -54,6 +90,7 @@ p{
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
+    
 }
 .yes{
     background-color: var(--color-secondary);
