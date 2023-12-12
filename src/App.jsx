@@ -22,6 +22,7 @@ function App() {
           <Route path="/becomeVendor" element={<BecomeVendor />} />
         </Routes>
         
+        
       </div>
       <Footer />
     </Router>
