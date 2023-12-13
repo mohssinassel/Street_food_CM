@@ -10,7 +10,7 @@ import MenuItem2 from '../components/menuItem2';
 import "../styles/pagination.css";
 import ProfileVendorInfo from '../components/ProfileVendorInfo';
 import Discount from '../components/Discount';
-import AddPlat from '../components/AddPlat';
+
 
 
 function ProfileVendor() {

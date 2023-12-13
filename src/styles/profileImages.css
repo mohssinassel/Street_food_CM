@@ -93,3 +93,16 @@
     color: #333;
     font-family: 'Silkscreen', sans-serif;
 }
+@media only screen and (max-width: 800px) {
+    .profil_information_container{
+        flex-direction: column;
+    }
+    .vertical-line{
+        display: none;
+    }
+    .profil_information ,.profil_img_container{
+        width: 100%;
+    }
+   
+  }
+  

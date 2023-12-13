@@ -1,17 +1,45 @@
-
-import './App.css'
-import FirstPage from './pages/FirstPage'
-import MyThreeJSComponent from './components/MyThreeJSComponent'
-import ProfileVendor from './pages/ProfileVendor'
-
+// Date: 07/12/2023
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Topbar from "./components/Topbar"; 
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import About from "./pages/Apropos";
+import BecomeVendor from "./pages/BecomeVendor";
+import ProfileVendor from "./pages/ProfileVendor";
+import Store from "./pages/Store";
+import FirstPage from "./pages/FirstPage";
+import { useLocation } from "react-router-dom"; 
 function App() {
- 
+  const location = useLocation();
 
+  
+  const isFirstPage = location.pathname === '/';
   return (
-    <>
-      <ProfileVendor/>
-    </>
-  )
+    
+      <>
+      {isFirstPage ? null : <Topbar />}
+      <div className="App">
+        
+        <Routes>
+          <Route path="/" element={<FirstPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/becomeVendor" element={<BecomeVendor />} />
+        </Routes>
+        
+        
+      </div>
+      
+      {isFirstPage ? null : <Footer />}
+      </>
+    
+    
+  );
 }
 
-export default App
+export default App;
