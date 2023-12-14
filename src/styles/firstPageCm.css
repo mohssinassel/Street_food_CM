@@ -58,35 +58,35 @@ body{
 .item .content{
     position: absolute;
     top:50%;
-    left:100px;
-    width:300px;
+    left:50px;
+    width:600px;
     text-align: left;
     padding:0;
     color:#ffffff;
     transform: translate(0,-50%);
     display: none;
     font-family: system-ui;
+    text-align: center;
 }
 .item:nth-child(2) .content{
     display: block;
     z-index: 11111;
 }
 .item .name{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     opacity: 0;
     animation:showcontent 1s ease-in-out 1 forwards
 }
-.item .des{
-    margin:20px 0;
-    opacity: 0;
-    font-size: 18px;
-    animation:showcontent 1s ease-in-out 0.3s 1 forwards
-}
+
 .item button{
     padding:10px 20px;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
     border:none;
     opacity: 0;
+    
     border-radius: 10px;
     background-color: #ffffff;
     transition: background-color 1s;
@@ -95,7 +95,7 @@ body{
 }
 .item button:hover{
     background-color: #ff0202;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 @keyframes showcontent{
     from{
@@ -114,6 +114,7 @@ body{
     z-index: 222222;
     text-align: center;
     width:100%;
+    
 }
 .buttons button{
     width:50px;
@@ -126,4 +127,37 @@ body{
 }.buttons button:hover{
     background-color: #ff0202;
     color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .item{
+        top: 30%;
+       
+    }
+    .item .content{
+        
+        top:70%;
+        left:25vw;
+    }
+    .buttons{
+        left: 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 850px) {
+    .item{
+        
+        width: 150px;
+        height: 200px;
+    }
+    .item .content{
+        width: 300px;
+        
+        left:50px;
+    }
+    .buttons{
+        left: 0px;
+    }
+    
 }
