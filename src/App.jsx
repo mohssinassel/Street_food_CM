@@ -63,7 +63,7 @@
             
           </div>
           
-          {isFirstPage ? null : <Footer />}
+          {/* {isFirstPage ? null : <Footer />} */}
           </>
         )}
         </>
