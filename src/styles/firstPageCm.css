@@ -1,4 +1,4 @@
-body{
+.htg{
     background-color: #eaeaea;
     overflow: hidden;
 }
@@ -9,7 +9,7 @@ body{
     transform: translate(-50%,-50%);
     width:100vw;
     height:100vh;
-    padding:50px;
+    /* padding:50px; */
     background-color: #f5f5f5;
     
     box-shadow: 0 30px 50px #dbdbdb;
