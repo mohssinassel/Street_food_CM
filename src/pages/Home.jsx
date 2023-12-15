@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="containerr main">
       <HeroSection/>
-      <ProfileVendor/>
+      
     </div>
   );
 }

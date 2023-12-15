@@ -13,7 +13,7 @@ import {
 export default function Topbar() {
   const [showSidebar, setShowSidebar] = useState(false);
   const links = [
-    { name: "Home", path: "/", icon: faHome },
+    { name: "Home", path: "/home", icon: faHome },
     { name: "About", path: "/about", icon: faList },
     { name: "Become Vendor", path: "/becomeVendor", icon: faUser },
     { name: "SignIn", path: "/signin", icon: faSignInAlt },
@@ -25,7 +25,7 @@ export default function Topbar() {
   return (
     <>
       <div className="navbar containerr">
-        <Link to="/" className="logo">
+        <Link to="/home" className="logo">
           F<span>ee</span>dit
         </Link>
         <div className="nav-links">

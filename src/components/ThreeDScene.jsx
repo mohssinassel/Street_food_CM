@@ -45,47 +45,7 @@ const Left = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 74px;
 
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-  }
-`;
-
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 5px;
-`;
-
-const Subtitle = styled.h2`
-  color: #da4ea2;
-`;
-
-const Desc = styled.p`
-  font-size: 24px;
-  color: lightgray;
-  @media only screen and (max-width: 768px) {
-    padding: 20px;
-    text-align: center;
-  }
-`;
-
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
 
 const Right = styled.div`
   flex: 3;
@@ -127,10 +87,6 @@ const ThreeDScene = () => {
       <Container>
         <Left>
           
-          <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
-          </Desc>
-          <Button>Learn More</Button>
         </Left>
         <Right>
           <Canvas>
@@ -140,7 +96,7 @@ const ThreeDScene = () => {
               <directionalLight position={[3, 2, 1]} />
               <Sphere args={[1, 100, 200]} scale={2.4}>
                 <MeshDistortMaterial
-                  color="#8d0404"
+                  color="rgb(254, 0, 2)"
                   attach="material"
                   distort={0.5}
                   speed={2}
@@ -148,7 +104,7 @@ const ThreeDScene = () => {
               </Sphere>
             </Suspense>
           </Canvas>
-          <Img src="/images/CDM.jpg" className="CDM" />
+          <Img src="/images/Drapeau_du_Maroc.jpg" className="CDM" />
         </Right>
       </Container>
     </Section>

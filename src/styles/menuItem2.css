@@ -16,19 +16,19 @@
     border-top: 3px solid black;
 }
 .menuItem2:hover .img_menu {
-    display: block;
+    width: 150px;
 }
 
 
 .img_menu{
-    display: none;
+    width: 0px;
     margin-right: 10px;
-    transition: all 2s ;
+    transition: width 1s ;
 }
 
 .menuItem2 div {
     border-radius: 10px;
-    width: 150px;
+    /* width: 150px; */
     height: 80px;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,3 +46,13 @@
     flex: 2;
     align-items: center;
 }
+
+@media only screen and (max-width: 650px) {
+    .menuItem2:hover .NamePlat{
+        display: none;
+    }
+    .menuItem2:hover .img_menu {
+        width: 120px;
+    }
+  }
+  

@@ -1,14 +1,15 @@
-import MyThreeJSComponent from "../components/MyThreeJSComponent";
-import ThreeDScene from "../components/ThreeDScene";
+// import MyThreeJSComponent from "../components/MyThreeJSComponent";
+// import ThreeDScene from "../components/ThreeDScene";
 import "../styles/firstPage.css";
+import FirstPageCm from "../components/FirstPageCm";
 
 const FirstPage = () => {
   return (
-    <div>
-      <h1>First Page</h1>
-      <ThreeDScene/>
-      
-    </div>
+    
+      // <ThreeDScene/>
+      <FirstPageCm/>
+
+
   );
 }
 
