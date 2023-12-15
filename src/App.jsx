@@ -54,7 +54,7 @@
             <Routes>
             {isFirstPage && <Route path="/" element={<FirstPage />} />}
               <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<ProfileVendor />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/becomeVendor" element={<BecomeVendor />} />
