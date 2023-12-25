@@ -1,0 +1,11 @@
+Model Information:
+* title:	Delonghi Kettle
+* source:	https://sketchfab.com/3d-models/delonghi-kettle-685484672eff44f6bf73d44ca619ada6
+* author:	Streak17(ashish sharma) (https://sketchfab.com/Streak17)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Delonghi Kettle" (https://sketchfab.com/3d-models/delonghi-kettle-685484672eff44f6bf73d44ca619ada6) by Streak17(ashish sharma) (https://sketchfab.com/Streak17) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

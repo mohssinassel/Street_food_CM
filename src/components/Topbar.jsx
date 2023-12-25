@@ -17,7 +17,7 @@ export default function Topbar() {
     { name: "About", path: "/about", icon: faList },
     { name: "Become Vendor", path: "/becomeVendor", icon: faUser },
     { name: "SignIn", path: "/signin", icon: faSignInAlt },
-    { name: "SignUp", path: "/signup", icon: faCashRegister },
+    // { name: "SignUp", path: "/signup", icon: faCashRegister },
   ];
   function closeSidebar() {
     setShowSidebar(false);
