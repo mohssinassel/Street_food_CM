@@ -23,31 +23,31 @@
 
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+    // useEffect(() => {
       
-      const fetchData = async () => {
-        try {
+      // const fetchData = async () => {
+      //   try {
           
-          await new Promise(resolve => setTimeout(resolve, 10000));
+      //     await new Promise(resolve => setTimeout(resolve, 10000));
           
-          setLoading(false);
-        } catch (error) {
-          console.error('Error fetching data:', error);
+      //     setLoading(false);
+      //   } catch (error) {
+      //     console.error('Error fetching data:', error);
           
-          setLoading(false);
-        }
-      };
+      //     setLoading(false);
+      //   }
+      // };
 
       
-      fetchData();
-    }, []);
+    //   fetchData();
+    // }, []);
     return (
       
         <>
-        {loading ? (
+        {/* {loading ? (
           <Loading  />
         ) : (
-          <>
+          <> */}
           {isFirstPage ? null : <Topbar />}
           <div className="App">
             
@@ -66,10 +66,10 @@
           {isFirstPage ? null : <Footer />}
           </>
         )}
-        </>
+        // </>
       
       
-    );
-  }
+    // );
+  // }
 
   export default App;

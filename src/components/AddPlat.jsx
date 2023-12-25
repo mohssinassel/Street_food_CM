@@ -8,7 +8,7 @@ const AddPlat = () => {
     return (
         <div className='addPlat'>
             <div className='addContainer'>
-                <h2>Add Plat</h2>
+                
                 <div className="addPlat_container">
                     
                     <div className="addPlat_info">
@@ -26,7 +26,7 @@ const AddPlat = () => {
                     </div>
                     <button>Add</button>
                 </div>
-                <h2>Add Plat To Discount</h2>
+                
                 <div className='addPlatToDisc_container'>
                 
                     <div className="addPlatToDisc">
