@@ -15,6 +15,8 @@ import Store from "./pages/Store";
 import FirstPage from "./pages/FirstPage";
 import { useLocation } from "react-router-dom";
 import Loading from "./components/loading";
+import PersonalInfo from "./components/PersonalInfo";
+import StoreInfo from "./components/StoreInfo";
 function App() {
   const location = useLocation();
 
@@ -51,6 +53,9 @@ function App() {
               <Route path="/about" element={<ProfileVendor />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/becomeVendor" element={<BecomeVendor />} />
+              <Route path="/becomeVendor/personal" element={<PersonalInfo />} />
+              <Route path="/becomeVendor/store" element={<StoreInfo />} />
+
             </Routes>
           </div>
 

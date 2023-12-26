@@ -41,7 +41,7 @@ export default function SignIn() {
           <motion.div
           initial={{ opacity: 0, y: 50 }} // Animation de départ : invisible et légèrement décalé vers le bas
           animate={{ opacity: 1, y: 0 }} // Animation à l'affichage : devenir visible et revenir à sa position initiale
-          transition={{ duration: 4, ease: 'easeInOut' }} // Durée et type de transition
+          transition={{ duration: 2 , ease: 'easeInOut' }} // Durée et type de transition
           >
           <div className="text-sci" style={{ opacity: 0, animation: 'fadeIn 1s forwards' }}>
           
@@ -69,7 +69,7 @@ export default function SignIn() {
         <motion.div
           initial={{ opacity: 0, y: 0 }} // Animation de départ : invisible et légèrement décalé vers le bas
           animate={{ opacity: 1, y: 0 }} // Animation à l'affichage : devenir visible et revenir à sa position initiale
-          transition={{ duration: 4, ease: 'easeInOut' }} // Durée et type de transition
+          transition={{ duration: 2, ease: 'easeInOut' }} // Durée et type de transition
           >
         <div className={`logreg-box ${isRegisterActive ? "active" : ""}`}>
           <div className="form-box login">

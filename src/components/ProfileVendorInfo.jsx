@@ -35,7 +35,7 @@ const ProfileVendorInfo = () =>{
             <p>Male</p>
         </div>
         <div className="vendor_info_div">
-            <p>Rate</p>
+            <p className="titleVendor">Rate</p>
             <hr/>
             <p><FaStar className="star"/><FaStar className="star"/><FaStar className="star"/><FaStar className="star"/></p>
         </div>
@@ -48,7 +48,7 @@ const ProfileVendorInfo = () =>{
             <p>16:00 - 01:00</p>
         </div>
         <div className="vendor_info_div">
-            <p>Pass Fun</p>
+            <p className="titleVendor">Pass Fun</p>
             <hr/>
             <div className="passFunBtnContainer">
                 <button className="btnPassFun yes">YES</button>
