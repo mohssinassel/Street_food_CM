@@ -145,21 +145,7 @@
                       <input
                         type="text"
                         placeholder="Search for a location"
-                        style={{
-                          position: 'relative',
-                          boxSizing: 'border-box',
-                          border: '0px',
-                          width: '340px',
-                          left: '39%',
-                          top: '30px',
-                          height: '40px',
-                          padding: '0 12px',
-                          borderRadius: '3px',
-                          boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
-                          fontSize: '14px',
-                          outline: 'none',
-                          textOverflow: 'ellipses',
-                        }}
+                        className="searchInputMap"
                       />
                     </Autocomplete>
                 {/* {directions && (

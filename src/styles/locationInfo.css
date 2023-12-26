@@ -20,3 +20,10 @@
     align-items: center;
     gap: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .locationInfoIcon{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

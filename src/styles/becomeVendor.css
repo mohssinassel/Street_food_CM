@@ -86,3 +86,14 @@
     font-family:  monospace;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) {
+    .becomeVendorSecond{
+        display: none;
+    }
+    .becomeVendorFirst{
+        width: 90%;
+        padding-left: 0;
+        
+    }
+  }

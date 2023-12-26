@@ -10,8 +10,14 @@
 
 .menu_info{
     align-items: center;
-
 }
+.inputDescription{
+    width: 700px;
+    height: 70px;
+    padding-top: 10px;
+}
+
+
 
 .MenuStoreContainer{
     display: flex;
@@ -105,4 +111,20 @@
 }
 .Btn2Personal{
     margin-top: 30px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .inputDescription{
+        width: 300px ;
+    }
+    .MenuStoreContainerMain{
+        width: 100%;
+    }
+    .menuInputs{
+        width: 150px;
+        height: 30px;
+    }
+    .menu_info{
+        align-items: start;
+    }
 }

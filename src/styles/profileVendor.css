@@ -123,4 +123,11 @@
     .profile_container_left , .profile_container_right{
         width: 100%;
     }
+    .title_menu{
+        margin-left: 80px;
+        gap: 10px;
+    }
+    .title_menu h2{
+        font-size: 1.1rem;
+    }
   }

@@ -54,5 +54,8 @@
     .menuItem2:hover .img_menu {
         width: 120px;
     }
+    .NamePlat{
+        font-size: 0.8rem;
+    }
   }
   

@@ -79,7 +79,7 @@ const StoreInfo = () => {
                         <div className="personalInfo_info">
                             <h3>Description</h3>
                             <div className="FullNameContainer">
-                            <textarea type="email" placeholder="Enter Description of your Store" style={{width:"700px" , height:'70px',paddingTop:'10px'}} className="PersonalNormalInput"/>
+                            <textarea type="email" placeholder="Enter Description of your Store"  className="PersonalNormalInput inputDescription"/>
                             </div>
                         </div>
                         <div className="personalInfo_info">
@@ -125,15 +125,15 @@ const StoreInfo = () => {
 
                                 <div className={`addInfoPlat ${showAddInfoPlat ? 'show' : ''}`}>
                                     <div className="addInfoPlatDiv">
-                                        <input type="text" placeholder="Enter Plat Name" className="PersonalNormalInput" value={platDetails.name}
+                                        <input type="text" placeholder="Enter Plat Name" className="PersonalNormalInput menuInputs" value={platDetails.name}
               onChange={(e) => setPlatDetails({ ...platDetails, name: e.target.value })}/>
-                                        <input type="text" placeholder="Enter Price" className="PersonalNormalInput" value={platDetails.price}
+                                        <input type="text" placeholder="Enter Price" className="PersonalNormalInput menuInputs" value={platDetails.price}
               onChange={(e) => setPlatDetails({ ...platDetails, price: e.target.value })}/>
                                     </div>
                                     <div className="addInfoPlatDiv">
-                                        <input type="text" placeholder="Enter Category" className="PersonalNormalInput" value={platDetails.category}
+                                        <input type="text" placeholder="Enter Category" className="PersonalNormalInput menuInputs" value={platDetails.category}
               onChange={(e) => setPlatDetails({ ...platDetails, category: e.target.value })}/>
-                                        <input type="file"  className="PersonalNormalInput forImage" onChange={handleImageChange}/>
+                                        <input type="file"  className="PersonalNormalInput forImage menuInputs" onChange={handleImageChange}/>
                                     </div>
                                     <div>
                                         <button className=" confirmeAdd" onClick={handleConfirmClick}   >Confirme</button>
