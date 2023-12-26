@@ -4,10 +4,12 @@ import HeroSection from "../components/HeroSection";
 import ProfileVendor from "./ProfileVendor";
 function Home() {
   return (
-    <div className="containerr main">
-      <HeroSection/>
-      
-    </div>
+    <>
+      {/* <div className="background"></div> */}
+      <div className="containerr main">
+        <HeroSection />
+      </div>
+    </>
   );
 }
 export default Home;
