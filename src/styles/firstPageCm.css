@@ -1,11 +1,6 @@
-<<<<<<< Updated upstream
-.htg{
-    background-color: #eaeaea;
-=======
 body{
     background-color: #ffffff;
->>>>>>> Stashed changes
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .container{
     position: absolute;

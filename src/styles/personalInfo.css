@@ -1,0 +1,65 @@
+.persoInfoDiv{
+    width: 90%;
+    margin: 10px auto;
+    font-family: 'Rubik', sans-serif;
+}
+.persoInfoDiv h1{
+    font-size: 1.5rem;
+    
+    
+    color: #0404045f;
+    
+}
+.persoInfoDiv h4{
+    font-size: 0.6rem;
+    
+    color: #040404;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+.personalInfo_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.personalInfo_info{
+    width: 100%;
+    display: flex;
+    align-items: space-between;
+    gap: 15rem;
+}
+.personalInfo_info h3{
+    width: 100px;
+}
+.FullNameContainer{
+    /* width: 100%; */
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1rem;
+    align-items: center;
+}
+.PersonalNormalInput{
+    width: 300px;
+    height: 40px;
+    border: 2px solid #0404045f;
+    border-radius: 2px;
+    padding-left: 10px;
+    font-family: 'Rubik', sans-serif;  
+    font-size: 0.6rem;
+
+}
+
+.Btn2Personal{
+   margin-top: 50px;
+}
+.NumberInput{
+    width: 100px;
+    height: 40px;
+    border: 2px solid #0404045f;
+    border-radius: 2px;
+    padding-left: 10px;
+    font-family: 'Rubik', sans-serif;  
+    font-size: 0.6rem;
+}
