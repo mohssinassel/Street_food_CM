@@ -1,0 +1,108 @@
+.MenuStoreContainerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+
+}
+
+
+.menu_info{
+    align-items: center;
+
+}
+
+.MenuStoreContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 100%;  
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    padding: 10px 20px;
+    background-color: rgba(2, 106, 71, 0.732);
+    gap: 0px;
+}
+.addPlatToStore{
+    padding: 5px 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer ;
+
+}
+.addInfoPlat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(2, 106, 71, 0.877);
+    gap: 40px;
+    padding: 20px 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.addInfoPlat.show {
+    opacity: 1;
+    max-height: 300px; /* Adjust the height as needed */
+  }
+.addInfoPlatDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.forImage{
+   background-color: rgb(255, 255, 255);
+   display: flex;
+   align-items: center;
+   justify-content: center  ;
+   padding: 6px;
+}
+.confirmeAdd{
+    padding: 10px 50px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer ;
+}
+
+.addedPlatImage{
+    width: 200px;
+    height: 90px;
+}
+.addedPlatItem{
+    background-color: rgb(2, 86, 26)    ;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 10px 0;
+}
+.addedPlats{
+    width: 100%;
+    color: white;
+    
+}
+.modifyAndDelete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+.icon_modif_plat{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 20px;
+    height:20px;   
+}
+.Btn2Personal{
+    margin-top: 30px;
+}

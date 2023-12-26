@@ -45,7 +45,9 @@ const PersonalInfo = () => {
                         
                     </div>
                 </div>
-                <Link  to="/becomeVendor/store" className="continuBtn Btn2Personal" onClick={() => setActiveStep("store")}>Continue</Link>
+                <div className="containerBtn">
+                    <Link  to="/becomeVendor/store" className="continuBtn Btn2Personal" onClick={() => setActiveStep("store")}>Continue</Link>
+                </div>
             </div>
         </div>
     )

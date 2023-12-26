@@ -63,3 +63,9 @@
     font-family: 'Rubik', sans-serif;  
     font-size: 0.6rem;
 }
+.containerBtn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
