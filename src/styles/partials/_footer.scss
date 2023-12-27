@@ -1,10 +1,11 @@
 .footer{
-    background-color: #0f0f0f;
-    color: #fff;
+    background-color: whitesmoke;
+    color: #004a00;
     padding-block: 3em;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 1em;
+    bottom: 0;
     .footer-section{
         p{
             opacity: .9;

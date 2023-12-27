@@ -1,4 +1,16 @@
 .main {
-    padding-block: 3vw;
-    z-index: 999;
+    position: relative;
+    padding-block: 6vw;
+    // z-index: -999;
+    // background-image: url('../images/back_maroc.jpg');
+    // background-image: url('/images/background2.png');
+    background: url('/images/background1.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    // filter: blur(5px);
+    height: 90vh;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* Ajustez la couleur et l'opacité ici */
+}
+.home {
+    box-shadow: 0 16px 5px -10px rgba(0, 0, 0, 0.39);
 }
