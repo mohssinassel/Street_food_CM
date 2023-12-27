@@ -16,7 +16,8 @@ import { useLocation } from "react-router-dom";
 import Loading from "./components/loading";
 import PersonalInfo from "./components/PersonalInfo";
 import StoreInfo from "./components/StoreInfo";
-import Footer from "./components/Footer";
+import VendorMap from "./pages/VendorMap";
+import LocationInfo from "./components/LocationInfo"; 
 function App() {
   const location = useLocation();
 
@@ -26,19 +27,28 @@ function App() {
 
   return (
     <>
-      {isFirstPage ? null : <Topbar />}
-      <div className="App">
-        <Routes>
-          {isFirstPage && <Route path="/" element={<FirstPage />} />}
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<ProfileVendor />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/becomeVendor" element={<BecomeVendor />} />
-          <Route path="/becomeVendor/personal" element={<PersonalInfo />} />
-          <Route path="/becomeVendor/store" element={<StoreInfo />} />
-        </Routes>
-      </div>
-      <Footer />
+      {/* {loading ? (
+        <Loading />
+      ) : (
+        <> */}
+          {isFirstPage ? null : <Topbar />}
+          <div className="App">
+            <Routes>
+              {isFirstPage && <Route path="/" element={<FirstPage />} />}
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<ProfileVendor />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/becomeVendor" element={<BecomeVendor />} />
+              <Route path="/becomeVendor/personal" element={<PersonalInfo />} />
+              <Route path="/becomeVendor/store" element={<StoreInfo />} />
+              <Route path="/becomeVendor/location" element={<LocationInfo />} />
+
+            </Routes>
+          </div>
+
+          {/* {isFirstPage ? null : <Footer />} */}
+        {/* </>
+      )} */}
     </>
   );
 }

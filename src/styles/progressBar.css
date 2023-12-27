@@ -4,6 +4,7 @@
     justify-content:center;
     gap: 1rem;
     margin-top: 10px;
+    align-items: center ;
 }
 .barTargetDiv{
     display: flex;
@@ -31,3 +32,33 @@
     
 
 }
+.progress-bar-container{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.progress-bar{
+    width: 300px;
+    height: 10px;
+    box-sizing: border-box;
+    background-color: rgb(183, 183, 183);
+    border-radius: 10px;
+    margin-left: 100px;
+    display: flex;
+}
+.progress{
+    width: 0%;
+    height: 100%;
+    background-color: #006e28;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1000px) {
+    
+    .progress-bar-container{
+        display: none;
+    }
+    
+  }

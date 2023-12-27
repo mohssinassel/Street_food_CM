@@ -63,3 +63,32 @@
     font-family: 'Rubik', sans-serif;  
     font-size: 0.6rem;
 }
+.containerBtn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+@media only screen and (max-width: 1200px) {
+    .FullNameContainer{
+        flex-direction: column;
+        gap: 1rem;
+    }
+  }
+@media only screen and (max-width: 800px) {
+    .personalInfo_info{
+        gap: 1rem;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .personalInfo_info{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .FullNameContainer{
+        align-items: start;
+    }
+
+}
