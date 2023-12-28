@@ -15,7 +15,7 @@ const Discount = () => {
     
     return (
         <div>
-                <h3 className='profile_title'>Discount Of The Day</h3>
+                
                 <div className="discount_container" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
                     <img src="/images/menu/cheddarBaconRanchCorn.jpg" alt="" className='image_discount'/>
                     <div className="discount_info">

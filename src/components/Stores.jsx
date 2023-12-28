@@ -4,14 +4,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import StarRating from "./StarRating";
 import React, {useState} from "react";
-function Stores() {
+import { FaMapLocationDot } from "react-icons/fa6";
+import VendorMap from "../pages/VendorMap";
+
+const StorePopup = ({ store, onClose }) => {
+  return (
+    <div className="store-popup">
+      <h3>{store.nom_store}</h3>
+      <p>Owner: {store.proprietaire}</p>
+      <p>City: {store.ville}</p>
+      <div className="map-popup">
+        <VendorMap
+          initialLocation={{
+            lat: parseFloat(store.localisation.split(',')[0]),
+            lng: parseFloat(store.localisation.split(',')[1]),
+          }}
+        />
+      </div>
+      <button onClick={onClose}>Close</button>
+    </div>
+  );
+};
+function  Stores() {
+  const [selectedStore, setSelectedStore] = useState(null);
+  
   const stores = [
     {
       logo_store: "",
       nom_store: "Le Délice du Souk",
       proprietaire: "Fatima Zahra",
       ville: "Casablanca",
-      localisation: "latitude, longitude",
+      localisation: "34.42525, 23,42552",
       liste_menu: ["Tajine", "Brochettes", "Couscous", "Pastilla"],
       notation: 4.5,
     },
@@ -20,7 +43,7 @@ function Stores() {
       nom_store: "Marrakech Grill",
       proprietaire: "Karim Hassan",
       ville: "Tanger",
-      localisation: "latitude, longitude",
+      localisation: "24.63463, 12.32535",
       liste_menu: [
         "Chawarma",
         "Hamburger",
@@ -133,34 +156,44 @@ function Stores() {
         <div className="stores">
             {filteredStores.map((store) => (
                 <div className="store" key={store.nom_store}>
-                <div className="store_logo">
-                    <img
-                    src={food}
-                    alt="foodImage"
-                    style={{
-                        width: "300px",
-                        height: "400px",
-                        objectFit: "cover",
-                        borderRadius: "10px",
-                    }}
-                    />
-                </div>
-                <div className="store_info">
-                    <h3 style={{ marginTop: "10px" }}>{store.nom_store}</h3>
-                    <p>
-                    <StarRating rating={store.notation} />
-                    </p>
-                    <p>{store.ville}</p>
-                    <p style={{ marginTop: "5px" }}>
-                    <a href="#">Localisation</a>
-                    </p>
-                    <p style={{ color: "gray", marginTop: "5px" }}>
-                    {store.liste_menu.join(" | ")}
-                    </p>
-                </div>
+                  <div className="store_logo">
+                      <img
+                      src='./images/3124957.jpg'
+                      alt="foodImage"
+                      style={{
+                          width: "100%",
+                          height: "300px",
+                          objectFit: "cover",
+                          borderRadius: "10px",
+                      }}
+                      />
+                  </div>
+                  <div className="store_info">
+                      <h3 style={{ marginTop: "10px" }}>{store.nom_store}</h3>
+                      <p>
+                      <StarRating rating={store.notation} />
+                      </p>
+                      <div className="ville_local">
+                      <p>{store.ville}</p>
+                      <a href="#" onClick={(e) => {
+                      e.preventDefault();
+                      setSelectedStore(store);
+                    }}><FaMapLocationDot className="logo_local_home"/></a>
+                    
+                      </div>
+                      <p style={{ color: "gray", marginTop: "5px" }}>
+                      {store.liste_menu.join(" | ")}
+                      </p>
+                  </div>
                 </div>
             ))}
         </div>
+        {selectedStore && (
+          <StorePopup
+            store={selectedStore}
+            onClose={() => setSelectedStore(null)}
+          />
+        )}
           
       </div>
     </>

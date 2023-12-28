@@ -7,6 +7,7 @@ const AddPlat = () => {
 
     return (
         <div className='addPlat'>
+            <h3 className="profile_title">Add Plats</h3>
             <div className='addContainer'>
                 
                 <div className="addPlat_container">

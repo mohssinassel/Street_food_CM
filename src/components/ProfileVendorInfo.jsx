@@ -8,8 +8,9 @@ const ProfileVendorInfo = () =>{
    
   return (
     <>
+    <div className="vendor_info_Add_Plat">
     <div className='vendor_info'>
-        <h2 >Store Information</h2>
+        <h3 >Store Information</h3>
         <div className="vendor_info_div">
             <div>
                 <p>Email</p>
@@ -56,8 +57,11 @@ const ProfileVendorInfo = () =>{
             </div>
         </div>
     </div>
-
+    <div className="Add_plat_container_main">
+    
     <AddPlat/>
+    </div>
+    </div>
     </>
   );
 }
