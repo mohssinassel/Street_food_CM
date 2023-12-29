@@ -5,8 +5,6 @@ import "../styles/Home.scss";
 import HeroSection from "../components/HeroSection";
 import ProfileVendor from "./ProfileVendor";
 import 'react-toastify/dist/ReactToastify.css';
-import Stores from "../components/Stores";
-import Footer from "../components/Footer";
 function Home() {
   const location = useLocation();
  

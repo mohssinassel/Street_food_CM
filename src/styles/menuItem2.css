@@ -1,9 +1,9 @@
 .menuItem2{
-    
+    margin: 0 auto;
     border-top: 1px solid #ccc;
     padding: 10px;
-    margin: 10px;
-    width: 90%;
+    
+    width: 80%;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -35,8 +35,8 @@
     background-size: cover;
   }
 .menuItem2 p{
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 0.8rem;
+    /* font-weight: 300; */
     margin: 0 ;
     padding: 0.5rem;
     flex: 1;

@@ -55,6 +55,7 @@ function ProfileVendor() {
                   ))}
                 </div>
             </div>
+            <h3 className='profile_title'>Discount Of The Day</h3>
             <Discount/>
             
           </div>

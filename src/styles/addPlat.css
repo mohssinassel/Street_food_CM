@@ -52,7 +52,7 @@
     
     position: relative;
 }
-.addPlat h3{
+.addPlat_info h3 , .addPlatToDisc h3{
     font-size: 1rem;
     font-weight: 400;
     /* margin: 0; */
