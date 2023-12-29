@@ -3,17 +3,6 @@ import CustomImage from "./CustomImage";
 import { useSpring, animated } from "react-spring";
 
 export default function HeroSection() {
-  // const images = [
-  //   "/streetFoodImages/street_food_im11.png",
-  //   "/streetFoodImages/street_food_im14.jpg",
-  //   "/streetFoodImages/street_food_im13.png",
-  //   "/streetFoodImages/street_food_im15.jpg",
-  //   "/streetFoodImages/street_food_im12.png",
-  //   "/streetFoodImages/street_food_im6.jpg",
-  //   "/streetFoodImages/street_food_im7.jpg",
-  //   "/streetFoodImages/street_food_im8.jpg",
-  //   "/streetFoodImages/street_food_im9.jpg",
-  // ];
   const images = [
     {
       src: "/streetFoodImages/street_food_im11.png",
@@ -110,11 +99,11 @@ export default function HeroSection() {
           Explore Now
         </animated.button>
       </div>
-      <div className="col gallery">
+      {/* <div className="col gallery">
         {images.map((image, index) => (
           <CustomImage image={image} pt={"90%"} key={index} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

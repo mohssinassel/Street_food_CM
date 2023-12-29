@@ -18,6 +18,7 @@ import PersonalInfo from "./components/PersonalInfo";
 import StoreInfo from "./components/StoreInfo";
 import VendorMap from "./pages/VendorMap";
 import LocationInfo from "./components/LocationInfo"; 
+import Footer from "./components/Footer";
 function App() {
   const location = useLocation();
 
@@ -46,7 +47,7 @@ function App() {
             </Routes>
           </div>
 
-          {/* {isFirstPage ? null : <Footer />} */}
+          {isFirstPage ? null : <Footer />}
         {/* </>
       )} */}
     </>
