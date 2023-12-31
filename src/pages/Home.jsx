@@ -6,6 +6,8 @@ import HeroSection from "../components/HeroSection";
 import ProfileVendor from "./ProfileVendor";
 import 'react-toastify/dist/ReactToastify.css';
 import Stores from "../components/Stores";
+
+import HeroSection3 from "../components/heroSection3";
 function Home() {
   const location = useLocation();
  
@@ -26,8 +28,9 @@ function Home() {
 }, []);
   return (
     <>
-    <div className="containerr main">
-      <HeroSection/>
+    {/* here was aslso class main and container*/}
+    <div >
+      <HeroSection3/>
       <ToastContainer />
     </div>
       
