@@ -22,7 +22,11 @@
   
 .search {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap : 5rem;
+}
+.search_input{
+  width: 400px;
 }
 .search_input input {
   width: 100%;
