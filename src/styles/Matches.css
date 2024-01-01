@@ -1,0 +1,17 @@
+.notification-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50px;
+}
+.countries, .timing, .stadium {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .timing>p {
+        font-size: small;
+    }
+}
+

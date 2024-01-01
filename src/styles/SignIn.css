@@ -41,6 +41,7 @@
     width: 100%;
     /* background: rgba(0, 0, 0, 0.5); */
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+    padding: 15px;
 }
 .content .logo {
     font-size: 30px;
