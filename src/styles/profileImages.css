@@ -103,6 +103,9 @@
     .profil_information ,.profil_img_container{
         width: 100%;
     }
+    .profil_img_container{
+        margin-top: 20px;
+    }
    
   }
   

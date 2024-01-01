@@ -65,3 +65,45 @@
     letter-spacing: 6px;
     -webkit-text-stroke: 2px rgb(7, 7, 7); /* Adjust the stroke size as needed */
 }
+.circleHome{
+    width: 100px;
+    height: 100px
+}
+
+@media screen and (max-width: 1200px) {
+    .imgContainerHero{
+        display: none;
+    }
+    .Title_Hero{
+        font-size: 2rem;
+    }
+    .infoContainerHero{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .second_blur{
+        top: 20rem; 
+        right: 0rem;
+        box-shadow: 0 0 160px 40px rgb(255, 0, 0);
+    }
+    .mainHero{
+        height: 50vh;
+    }
+
+      
+  }
+@media screen and (max-width: 1400px) {
+    .imageHeroMain{
+        width: 90%;
+        object-fit: cover;
+        margin-left: 50px;
+    }
+    .circleHome{
+        width: 70px;
+        height: 70px;
+    }
+      
+  }

@@ -18,35 +18,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { Autoplay, EffectCards } from 'swiper/modules';
+import StorePopup from "../components/StorePopup";
 
 
-const StorePopup = ({ store, onClose }) => {
-  return (
-    <div className="store-popup">
-      <div className="OverlayPop"></div>
-      <div className="contentPop">
-        <div className="headerContentPop">
-          <div className="headerContentPopInfo"> 
-            <div><span>A</span> : Your Location</div>
-            <div><span>B</span> : Store Location</div>
-          </div>
-          <div>
-            <div onClick={onClose}><IoCloseCircle style={{width:'30px',height:'30px' , cursor:'pointer'}}/></div>
-          </div>
-        </div>
-      <div className="map-popup">
-        <CustomerMap
-          initialLocation={{
-            lat: parseFloat(store.localisation.split(',')[0]),
-            lng: parseFloat(store.localisation.split(',')[1]),
-          }}
-        />
-      </div>
-     
-      </div>
-    </div>
-  );
-};
+
 function StorePage({store}) {
 
   const menuList = vendor[0].menu;
@@ -59,7 +34,7 @@ function StorePage({store}) {
             <p><StarRating rating={store.notation}/></p>
             
           </div>
-          <div className="headrStorePage2" onClick={(e) => {e.preventDefault(); setSelectedStore( {store});}}>
+          <div className="headrStorePage2" onClick={() => { setSelectedStore( store);}}>
             <CustomerMapProfil 
               initialLocation={{
                 lat: parseFloat(store.localisation.split(',')[0]),
@@ -78,14 +53,13 @@ function StorePage({store}) {
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
-            }}
-                      
-                      effect={'cards'}
-                      grabCursor={true}
-                      
-                      modules={[EffectCards , Autoplay]}
-                      className="mySwiper"
-                  >
+            }} 
+                effect={'cards'}
+                grabCursor={true}
+                
+                modules={[EffectCards , Autoplay]}
+                className="mySwiper"
+            >
                   
                   <SwiperSlide className='swiperSlide1'><img src="/images/pic_vendor4.jpg" alt="" className='image_profil'/></SwiperSlide>
                   <SwiperSlide className='swiperSlide1'><img src="/images/pic_vendor2.jpg" alt="" className='image_profil'/></SwiperSlide>

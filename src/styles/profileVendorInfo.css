@@ -105,3 +105,20 @@ hr{
 .yes{
     background-color: var(--color-secondary);
 }
+
+@media only screen and (max-width: 900px) {
+  .vendor_info_Add_Plat{
+        flex-direction: column;
+  } 
+  .vendor_info{
+        width: 100%;
+        height: 50%;
+        margin-bottom: 20px;
+  }
+  .Add_plat_container_main{
+        width: 100%;
+        height: 50%;
+  }
+
+    
+  }

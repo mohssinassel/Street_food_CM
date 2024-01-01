@@ -53,9 +53,9 @@ export default function HeroSection3() {
         <div className="imgContainerHero">
           {displaySoccer && (
         <motion.div
+            className="circleHome"
             style={{
-              width: '100px',
-              height: '100px',
+              
               borderRadius: "50%",
               backgroundImage: `url(${circleImage2})`, // Set the background image
               backgroundSize: "cover",

@@ -128,3 +128,12 @@
         align-items: start;
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+    .addedPlatImage{
+        width: 100px;
+        height: 50px;
+    }
+}
+
