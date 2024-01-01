@@ -45,6 +45,11 @@
        
         left: 20%;
     }
+    .directionInfo{
+        left: 20%;
+        flex-direction: column;
+    
+    }
 }
 @media only screen and (max-width: 600px) {
     .searchInputMap{

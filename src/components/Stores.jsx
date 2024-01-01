@@ -13,7 +13,9 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import SwiperCore from 'swiper';
 import StorePopup from "./StorePopup";
-
+import ReactPaginate from "react-paginate";
+import "swiper/css/pagination";
+import "../styles/pagination.css";
 // const StorePopup = ({ store, onClose }) => {
 //   return (
 //     <div className="store-popup">
@@ -71,6 +73,17 @@ function  Stores() {
       (filterTerm === "" || store.ville.toLowerCase() === filterTerm.toLowerCase())
     );
   });
+  const itemsPerPage = 6;
+  const [pageNumber, setPageNumber] = useState(0);
+  const startIndex = pageNumber * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const displayMenu = filteredStores.slice(startIndex, endIndex);
+  
+  const pageCount = Math.ceil(filteredStores.length / itemsPerPage);
+  
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
  
     
@@ -111,7 +124,7 @@ function  Stores() {
             </div>
         </div>
         <div className="stores">
-            {filteredStores.map((store, index) => (
+            {displayMenu.map((store, index) => (
                 <div className="store" key={store.nom_store}>
                 
                   <div className="store_logo" >
@@ -168,6 +181,18 @@ function  Stores() {
                 </div>
             ))}
         </div>
+        
+        <div className="pagination">
+        <ReactPaginate
+          pageCount={pageCount}
+          // pageRangeDisplayed={5}
+          onPageChange={changePage}
+          previousLabel={"Précédent"}
+          nextLabel={"Suivant"}
+          containerClassName="paginationBttns"
+        />
+      </div>
+        
         {selectedStore && (
           <StorePopup
             store={selectedStore}

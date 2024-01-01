@@ -38,7 +38,7 @@ export default function HeroSection3() {
                 type: "ease-in",
               }}
               >
-              <span>Feedit</span> <br />
+              <span><span className="green">F</span>ee<span className="green">dit</span></span> <br />
                 Foot & Food.
                 
               </motion.h1>
@@ -55,7 +55,7 @@ export default function HeroSection3() {
         <motion.div
             className="circleHome"
             style={{
-              
+              marginTop:'30px',
               borderRadius: "50%",
               backgroundImage: `url(${circleImage2})`, // Set the background image
               backgroundSize: "cover",

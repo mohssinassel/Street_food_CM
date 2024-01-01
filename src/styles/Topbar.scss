@@ -23,6 +23,15 @@ body {
   font-size: var(--font-size);
   font-family: "Roboto", sans-serif;
 }
+.logo {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: var(--primary-color);
+  text-shadow: 0 1px 3px var(--shadow-color);
+  span {
+    color: var(--text-color);
+  }
+}
 .navbar {
   height: 55px;
   box-shadow: 0 3px 6px var(--shadow-color);
@@ -31,15 +40,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .logo {
-    font-size: 1.5em;
-    font-weight: bolder;
-    color: var(--primary-color);
-    text-shadow: 0 1px 3px var(--shadow-color);
-    span {
-      color: var(--text-color);
-    }
-  }
+  
   .nav-links {
     a {
       margin-left: 1em;
@@ -318,7 +319,10 @@ body {
 }
 @media (max-width: 768px) {
   .timing>p {
-      font-size: small;
+      display: none;
+  }
+  .stadium>p {
+      display: none;
   }
 }
 
@@ -332,4 +336,7 @@ body {
   100% {
     transform: scale(1);
   }
+}
+.sidebar-logo {
+  margin: 20px;
 }
