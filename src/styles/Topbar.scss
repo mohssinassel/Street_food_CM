@@ -318,8 +318,9 @@ body {
   align-items: center;
 }
 @media (max-width: 768px) {
-  .timing>p {
-      display: none;
+  .timing>p{
+    font-size: smaller;
+    font-weight: bold;
   }
   .stadium>p {
       display: none;

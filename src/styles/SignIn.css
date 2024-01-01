@@ -1,7 +1,7 @@
 .signInBody{
     position: absolute;
     width: 80%;
-    top: 50%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 550px;
@@ -14,7 +14,7 @@
 }
 .signInBody .content {
     position: absolute;
-    top: 0;
+    top: 15%;
     left: 0;
     width: 59%;
     height: 100%;

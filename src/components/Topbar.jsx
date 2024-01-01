@@ -32,7 +32,7 @@ export default function Topbar() {
     // { name: "Profile", path: "/", icon: faUser },
     { name: "Parametres", path: "/", icon: faCog },
     { name: "SignIn", path: "/signin", icon: faSignInAlt },
-    { name: "SignOut", path: "/", icon: faSignOutAlt},
+    { name: "SignOut", path: "/", icon: faSignOutAlt },
   ];
   function closeSidebar() {
     setShowSidebar(false);
@@ -45,7 +45,7 @@ export default function Topbar() {
   function setAccount() {
     setShowAccount(!showAccount);
   }
-  // matches 
+  // matches
   const [matchInfo, setMatchInfo] = useState({
     teamA: "Maroc",
     teamB: "Belgique",
@@ -54,6 +54,7 @@ export default function Topbar() {
     stadium: "Grand Stade de Casablanca",
     timeRemaining: 90,
   });
+  
 
   const [showPopup, setShowPopup] = useState(false);
 
@@ -101,6 +102,9 @@ export default function Topbar() {
       clearInterval(timer);
       setShowPopup(true);
       setMatcheTermine(true);
+      setMatchInfo((prevMatchInfo) => ({
+        ...prevMatchInfo,
+      }));
     }
 
     return () => clearInterval(timer);
@@ -111,36 +115,38 @@ export default function Topbar() {
     minute: "2-digit",
   });
   const [matcheTermine, setMatcheTermine] = useState(false);
+  
 
   const renderNotifications = () => {
     if (matcheTermine) {
       return (
         showNotification && (
           <div className="dropDownNotification">
-      <div className="content">
-        <div className="content-flag">
-        <img
-          src="https://flagcdn.com/80x60/ma.png"
-          srcset="https://flagcdn.com/160x120/ma.png 2x,
+            <div className="content">
+              <div className="content-flag">
+                <img
+                  src="https://flagcdn.com/80x60/ma.png"
+                  srcset="https://flagcdn.com/160x120/ma.png 2x,
             https://flagcdn.com/240x180/ma.png 3x"
-          width="80"
-          height="60"
-          alt="Maroc"/>
-        </div>
-        <div className="content-text">
-        <ul className="list">
-        <li>Now</li>
-      </ul>
-          <p>
-          <span className="info-title">
-            Congratulations, your national team won !
-          </span>{" "}
-          <br />
-          You have a pass fun from all street food vendors.
-        </p></div>
-        
-      </div>
-    </div>
+                  width="80"
+                  height="60"
+                  alt="Maroc"
+                />
+              </div>
+              <div className="content-text">
+                <ul className="list">
+                  <li>Now</li>
+                </ul>
+                <p>
+                  <span className="info-title">
+                    Congratulations, your national team won !
+                  </span>{" "}
+                  <br />
+                  You have a pass fun from all street food vendors.
+                </p>
+              </div>
+            </div>
+          </div>
         )
       );
     } else {
@@ -148,7 +154,9 @@ export default function Topbar() {
         showNotification && (
           <div className="dropDownNotification">
             <div className="content">
-              <span style={{fontWeight: 'bold', color: "grey"}}>Pas de notifications</span>
+              <span style={{ fontWeight: "bold", color: "grey" }}>
+                Pas de notifications
+              </span>
             </div>
           </div>
         )
@@ -177,23 +185,34 @@ export default function Topbar() {
         </div>
 
         <div className="profilAndNotifs">
-          
-          <button type="button" className="icon-button" onClick={setNotification}>
-            <i style={{ fontSize: "25px", color: "black"}} className="fas fa-bell"></i>
-            {matcheTermine && (
-            <span className="icon-button__badge">1</span>
-            )}
+          <button
+            type="button"
+            className="icon-button"
+            onClick={setNotification}
+          >
+            <i
+              style={{ fontSize: "25px", color: "black" }}
+              className="fas fa-bell"
+            ></i>
+            {matcheTermine && <span className="icon-button__badge">1</span>}
           </button>
           <button type="button" className="icon-button" onClick={setAccount}>
-            <i style={{ fontSize: "25px", color: "black"}} className="fas fa-user"></i>
+            <i
+              style={{ fontSize: "25px", color: "black" }}
+              className="fas fa-user"
+            ></i>
           </button>
         </div>
         {renderNotifications()}
-        
+
         {showAccount && (
           <div className="dropDownNotification profile">
             <ul className="list menu">
-              <li ><Link to={"/profil"} style={{color:'black'}}>Profile</Link></li>
+              <li>
+                <Link to={"/profil"} style={{ color: "black" }}>
+                  Profile
+                </Link>
+              </li>
               <li>Settings</li>
               <li>Logout</li>
             </ul>
@@ -202,92 +221,92 @@ export default function Topbar() {
       </div>
       {/* <Matches/> */}
       <div className="notification-bar">
-      <div className="stadium">
-        <p>
-          <FontAwesomeIcon
-            icon={faLocationDot}
-            style={{ marginRight: "5px", color: "red" }}
-          />
-          {matchInfo.stadium}
-        </p>
-      </div>
-      <div className="countries">
-        {matchInfo.timeRemaining === 0 && (
-          <p
-            style={{
-              marginRight: "10px",
-              fontWeight: "bold",
-              color: "#008000",
-              animation: 'victory-animation 3s ease-in-out infinite'
-            }}
-          >
-            Qualifié
+        <div className="stadium">
+          <p>
+            <FontAwesomeIcon
+              icon={faLocationDot}
+              style={{ marginRight: "5px", color: "red" }}
+            />
+            {matchInfo.stadium}
           </p>
-        )}
-        {/* <img
-          src="https://flagcdn.com/40x30/ma.png"
-          srcset="https://flagcdn.com/80x60/ma.png 2x,
-              https://flagcdn.com/120x90/ma.png 3x"
-          width="40"
-          height="30"
-          alt="Maroc"
-          style={{ marginRight: "5px" }}
-        /> */}
-        <img
-          src="https://flagcdn.com/40x30/ma.png"
-          srcset="https://flagcdn.com/80x60/ma.png 2x, https://flagcdn.com/120x90/ma.png 3x"
-          width="40"
-          height="30"
-          alt="Maroc"
-          style={{
-            marginRight: "5px",
-            animation: matchInfo.timeRemaining === 0 && matchInfo.scoreA > matchInfo.scoreB ? 'victory-animation 3s ease-in-out infinite' : 'none'
-          }}
-        />
-        {matchInfo.timeRemaining === 0 ? (
-          <span
-            style={{ fontSize: "20px", color: "#008000", fontWeight: "bold" , animation: 'victory-animation 3s ease-in-out infinite'}}
-          >
-            {matchInfo.scoreA}
-          </span>
-        ) : (
-          <span style={{ fontSize: "20px" }}>{matchInfo.scoreA}</span>
-        )}
-
-        <span style={{ fontWeight: "bold", margin: "5px", fontSize: "18px" }}>
-          {" "}
-          -{" "}
-        </span>
-        <span style={{ fontSize: "20px" }}>{matchInfo.scoreB}</span>
-        <img
-          src="https://flagcdn.com/40x30/be.png"
-          srcset="https://flagcdn.com/80x60/be.png 2x,
-              https://flagcdn.com/120x90/be.png 3x"
-          width="40"
-          height="30"
-          alt="Belgique"
-          style={{ marginLeft: "5px" }}
-        />
-      </div>
-
-      <div className="timing">
-        <p style={{ color: "gray" }}>
-          {matchInfo.timeRemaining === 0 ? (
-            `Match terminé à ${currentHour}`
-          ) : (
-            <>
-              <p style={{color: "black"}}>
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ marginRight: "5px" }}
-                />
-                {matchInfo.timeRemaining} sec
-              </p>
-            </>
+        </div>
+        <div className="countries">
+          {matchInfo.timeRemaining === 0 && (
+            <p
+              style={{
+                marginRight: "10px",
+                fontWeight: "bold",
+                color: "#008000",
+                animation: "victory-animation 3s ease-in-out infinite",
+              }}
+            >
+              Qualifié
+            </p>
           )}
-        </p>
+          <img
+            src="https://flagcdn.com/40x30/ma.png"
+            srcset="https://flagcdn.com/80x60/ma.png 2x, https://flagcdn.com/120x90/ma.png 3x"
+            width="40"
+            height="30"
+            alt="Maroc"
+            style={{
+              marginRight: "5px",
+              animation:
+                matchInfo.timeRemaining === 0 &&
+                matchInfo.scoreA > matchInfo.scoreB
+                  ? "victory-animation 3s ease-in-out infinite"
+                  : "none",
+            }}
+          />
+          {matchInfo.timeRemaining === 0 ? (
+            <span
+              style={{
+                fontSize: "20px",
+                color: "#008000",
+                fontWeight: "bold",
+                animation: "victory-animation 3s ease-in-out infinite",
+              }}
+            >
+              {matchInfo.scoreA}
+            </span>
+          ) : (
+            <span style={{ fontSize: "20px" }}>{matchInfo.scoreA}</span>
+          )}
+
+          <span style={{ fontWeight: "bold", margin: "5px", fontSize: "18px" }}>
+            {" "}
+            -{" "}
+          </span>
+          <span style={{ fontSize: "20px" }}>{matchInfo.scoreB}</span>
+          <img
+            src="https://flagcdn.com/40x30/be.png"
+            srcset="https://flagcdn.com/80x60/be.png 2x,
+              https://flagcdn.com/120x90/be.png 3x"
+            width="40"
+            height="30"
+            alt="Belgique"
+            style={{ marginLeft: "5px" }}
+          />
+        </div>
+
+        <div className="timing">
+          <p style={{ color: "gray" }}>
+            {matchInfo.timeRemaining === 0 ? (
+              `Terminé à ${currentHour}`
+            ) : (
+              <>
+                <p style={{ color: "black" }}>
+                  <FontAwesomeIcon
+                    icon={faClock}
+                    style={{ marginRight: "5px" }}
+                  />
+                  {matchInfo.timeRemaining} sec
+                </p>
+              </>
+            )}
+          </p>
+        </div>
       </div>
-    </div>
       {showSidebar && <Sidebar links={links} />}
     </>
   );
