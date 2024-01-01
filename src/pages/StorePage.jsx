@@ -17,7 +17,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import { EffectCards } from 'swiper/modules';
+import { Autoplay, EffectCards } from 'swiper/modules';
 
 
 const StorePopup = ({ store, onClose }) => {
@@ -75,11 +75,15 @@ function StorePage({store}) {
           
             <div className="imagesStorePage">
             <Swiper
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
                       
                       effect={'cards'}
                       grabCursor={true}
                       
-                      modules={[EffectCards]}
+                      modules={[EffectCards , Autoplay]}
                       className="mySwiper"
                   >
                   

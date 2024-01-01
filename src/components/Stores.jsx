@@ -3,12 +3,14 @@ import food from "../images/food-1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import StarRating from "./StarRating";
-import React, {useState} from "react";
+import React, {useState , useRef , useEffect} from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
 import CustomerMap from "./CustomerMap";
 import { IoCloseCircle } from "react-icons/io5";
 import  stores  from "../utils/stores";
 import { Link } from "react-router-dom";
+import { Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const StorePopup = ({ store, onClose }) => {
   return (
@@ -39,16 +41,18 @@ const StorePopup = ({ store, onClose }) => {
   );
 };
 function  Stores() {
+
+  
+
   const [selectedStore, setSelectedStore] = useState(null);
   
   
 
 
-  const [searchTerm, setSearchTerm] = useState(""); // État pour stocker la valeur de la recherche
-  // ... (votre liste de stores)
+  const [searchTerm, setSearchTerm] = useState(""); 
+
   const [filterTerm, setFilterTerm] = useState("");
 
-  // Fonction pour mettre à jour l'état de la recherche
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -56,14 +60,6 @@ function  Stores() {
     setFilterTerm(filter);
   };
 
-  // // Filtrage des stores en fonction du terme de recherche
-  // const filteredStores = stores.filter((store) => {
-  //   return (
-  //     store.ville.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //     store.nom_store.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //     store.liste_menu.join(" ").toLowerCase().includes(searchTerm.toLowerCase())
-  //   );
-  // });
   const filteredStores = stores.filter((store) => {
     return (
       (store.ville.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -73,6 +69,13 @@ function  Stores() {
       (filterTerm === "" || store.ville.toLowerCase() === filterTerm.toLowerCase())
     );
   });
+
+ 
+    
+
+    
+
+  
   return (
     <>
       <div className="stores_container">
@@ -99,32 +102,52 @@ function  Stores() {
                 </div>
                 <div className="filter_btns">
                 <button onClick={() => handleFilter("")}>All</button>
-
-                    <button onClick={() => handleFilter("Casablanca")}>Casablanca</button>
-                    <button onClick={() => handleFilter("Rabat")}>Rabat</button>
-                    <button onClick={() => handleFilter("Tanger")}>Tanger</button>
+                <button onClick={() => handleFilter("Casablanca")}>Casablanca</button>
+                <button onClick={() => handleFilter("Rabat")}>Rabat</button>
+                <button onClick={() => handleFilter("Tanger")}>Tanger</button>
                 </div>
             </div>
         </div>
         <div className="stores">
-            {filteredStores.map((store) => (
+            {filteredStores.map((store, index) => (
                 <div className="store" key={store.nom_store}>
+                
                   <div className="store_logo" >
-                      <Link to={`/store/${store.id}`}>
-                      <img
-                      src='./images/3124957.jpg'
-                      alt="foodImage"
-                      style={{
-                          width: "100%",
-                          height: "300px",
-                          objectFit: "cover",
-                          borderRadius: "10px",
+                  <Swiper
+                      
+                      pagination={{
+                        dynamicBullets: true,
                       }}
-                      />
-                      </Link>
+                      modules={[Pagination ]}
+                      className="mySwiper"
+                      
+                    >
+                      <SwiperSlide>
+                        <img
+                          src={store.image1}
+                          style={{
+                            width: "100%",
+                            height: "300px",
+                            objectFit: "cover",
+                            borderRadius: "10px",
+                          }}
+                        />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img
+                          src={store.image2}
+                          style={{
+                            width: "100%",
+                            height: "300px",
+                            objectFit: "cover",
+                            borderRadius: "5px",
+                          }}
+                        />
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                   <div className="store_info">
-                      <h3 style={{ marginTop: "10px" }}>{store.nom_store}</h3>
+                      <h3 style={{ marginTop: "10px" }}><Link style={{color:"black"}}  to={`/store/${store.id}`}>{store.nom_store}</Link></h3>
                       <p>
                       <StarRating rating={store.notation} />
                       </p>

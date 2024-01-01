@@ -10,7 +10,7 @@ import 'swiper/css/effect-cards';
 
 
 // import required modules
-import { EffectCards } from 'swiper/modules';
+import { Autoplay, EffectCards } from 'swiper/modules';
 
 function ProfileImages() {
 
@@ -29,11 +29,15 @@ function ProfileImages() {
             <span class="vertical-line"></span>
             <div className='profil_img_container' >
                     <Swiper
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
                      
                 effect={'cards'}
                 grabCursor={true}
                 
-                modules={[EffectCards]}
+                modules={[EffectCards , Autoplay]}
                 className="mySwiper"
             >
             
