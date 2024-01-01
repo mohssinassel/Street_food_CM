@@ -59,3 +59,48 @@
   height: 30px;
 }
 
+.store-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+}
+.contentPop{
+  position: fixed;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  padding: 10px;
+  z-index: 1000;
+  
+}
+.headerContentPop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  width: 95%;
+  
+  
+}
+.headerContentPopInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+ 
+}
+
+.headerContentPopInfo span{
+  color: #ff0000;
+  font-weight: bold;
+  font-family: 'Rubik';
+  font-size: 0.7rem;}

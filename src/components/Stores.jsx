@@ -5,90 +5,43 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import StarRating from "./StarRating";
 import React, {useState} from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
-import VendorMap from "../pages/VendorMap";
+import CustomerMap from "./CustomerMap";
+import { IoCloseCircle } from "react-icons/io5";
+import  stores  from "../utils/stores";
+import { Link } from "react-router-dom";
 
 const StorePopup = ({ store, onClose }) => {
   return (
     <div className="store-popup">
-      <h3>{store.nom_store}</h3>
-      <p>Owner: {store.proprietaire}</p>
-      <p>City: {store.ville}</p>
+      <div className="OverlayPop"></div>
+      <div className="contentPop">
+        <div className="headerContentPop">
+          <div className="headerContentPopInfo"> 
+            <div><span>A</span> : Your Location</div>
+            <div><span>B</span> : {store.nom_store} Location</div>
+          </div>
+          
+          <div className="headerContentPopClose">
+            <div onClick={onClose}><IoCloseCircle style={{width:'30px',height:'30px' , cursor:'pointer'}}/></div>
+          </div>
+        </div>
       <div className="map-popup">
-        <VendorMap
+        <CustomerMap
           initialLocation={{
             lat: parseFloat(store.localisation.split(',')[0]),
             lng: parseFloat(store.localisation.split(',')[1]),
           }}
         />
       </div>
-      <button onClick={onClose}>Close</button>
+     
+      </div>
     </div>
   );
 };
 function  Stores() {
   const [selectedStore, setSelectedStore] = useState(null);
   
-  const stores = [
-    {
-      logo_store: "",
-      nom_store: "Le Délice du Souk",
-      proprietaire: "Fatima Zahra",
-      ville: "Casablanca",
-      localisation: "34.42525, 23,42552",
-      liste_menu: ["Tajine", "Brochettes", "Couscous", "Pastilla"],
-      notation: 4.5,
-    },
-    {
-      logo_store: "",
-      nom_store: "Marrakech Grill",
-      proprietaire: "Karim Hassan",
-      ville: "Tanger",
-      localisation: "24.63463, 12.32535",
-      liste_menu: [
-        "Chawarma",
-        "Hamburger",
-        "Brochettes mixtes",
-        "Thé à la menthe",
-      ],
-      notation: 4.2,
-    },
-    {
-      logo_store: "",
-      nom_store: "Riad El Medina",
-      proprietaire: "Amina Khalil",
-      ville: "Rabat",
-      localisation: "latitude, longitude",
-      liste_menu: ["Harira", "Pastilla", "Kefta", "Makouda"],
-      notation: 4.7,
-    },
-    {
-      logo_store: "",
-      nom_store: "Casa Shawarma Express",
-      proprietaire: "Ahmed El Mansouri",
-      ville: "Casablanca",
-      localisation: "latitude, longitude",
-      liste_menu: ["Shawarma", "Falafel", "Hummus", "Salades variées"],
-      notation: 4.6,
-    },
-    {
-      logo_store: "",
-      nom_store: "Tacos Time",
-      proprietaire: "Nadia Benjelloun",
-      ville: "Tanger",
-      localisation: "latitude, longitude",
-      liste_menu: ["Tacos", "Burgers", "Fajitas", "Boissons fraîches"],
-      notation: 4.3,
-    },
-    {
-      logo_store: "",
-      nom_store: "Kebab Royale",
-      proprietaire: "Youssef Amrani",
-      ville: "Rabat",
-      localisation: "latitude, longitude",
-      liste_menu: ["Kebab", "Pizzas", "Pâtes", "Glaces"],
-      notation: 4.8,
-    },
-  ];
+  
 
 
   const [searchTerm, setSearchTerm] = useState(""); // État pour stocker la valeur de la recherche
@@ -156,7 +109,8 @@ function  Stores() {
         <div className="stores">
             {filteredStores.map((store) => (
                 <div className="store" key={store.nom_store}>
-                  <div className="store_logo">
+                  <div className="store_logo" >
+                      <Link to={`/store/${store.id}`}>
                       <img
                       src='./images/3124957.jpg'
                       alt="foodImage"
@@ -167,6 +121,7 @@ function  Stores() {
                           borderRadius: "10px",
                       }}
                       />
+                      </Link>
                   </div>
                   <div className="store_info">
                       <h3 style={{ marginTop: "10px" }}>{store.nom_store}</h3>

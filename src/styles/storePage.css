@@ -1,0 +1,120 @@
+.mainStorePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 95vw;
+    
+    margin: auto 8px;
+    gap: 30px;
+    
+}
+.headrStorePage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.headrStorePage2{
+    width: 25%;
+}
+.headrStorePage1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headrStorePage1 h2{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.descriptionStorePage{
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    width: 40%;
+}
+.imagesAndDescriptionStore h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+}
+.imagesAndDescriptionStoreCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+}
+
+.menuStorePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.menuStorePage h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+}
+.menuStorePageContainer{
+    width: 100%;
+}
+.vendorStorePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 1rem;
+}
+.vendorStorePage h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+}
+.vendorStorePageDetail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+}
+.vendorStorePageDetailCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    gap: 10px;
+}
+.vendorStorePageDetailCont p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+}
+.vendorStorePageDetailContIcon{
+    width: 30px;
+    height: 30px;
+}
+.imagesAndDescriptionStore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+}
