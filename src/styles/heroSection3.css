@@ -63,5 +63,8 @@
     color: transparent;
     /* font-family:  cursive; */
     letter-spacing: 6px;
-    -webkit-text-stroke: 2px rgb(7, 7, 7); /* Adjust the stroke size as needed */
+    -webkit-text-stroke: 2px rgb(0, 0, 0); /* Adjust the stroke size as needed */
+}
+.Title_Hero span .green {
+    -webkit-text-stroke: 2px rgb(27, 116, 5);
 }

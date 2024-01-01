@@ -24,11 +24,9 @@ function Home() {
   }, []);
   return (
     <>
-    {/* here was aslso class main and container*/}
-    <div ></div>
       <HeroSection3/>
       <ToastContainer />
-      <Stores />
+      <Stores />  
     </>
   );
 }
