@@ -193,7 +193,7 @@ export default function Topbar() {
         {showAccount && (
           <div className="dropDownNotification profile">
             <ul className="list menu">
-              <li>Profile</li>
+              <li ><Link to={"/profil"} style={{color:'black'}}>Profile</Link></li>
               <li>Settings</li>
               <li>Logout</li>
             </ul>

@@ -9,8 +9,16 @@
   flex-direction: column;
   height: 100%;
   width: 70%;
-  /* border: 1px solid #054405; */
+  border: 1px solid transparent;
+  border-radius: 5px;
   padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.store_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .stores {
     display: grid;
@@ -18,11 +26,17 @@
     place-items: center;
     width: 90%;
     margin: 0 auto;
+    gap: 20px;
+    margin-bottom: 30px;
 }
   
 .search {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap : 5rem;
+}
+.search_input{
+  width: 400px;
 }
 .search_input input {
   width: 100%;
@@ -104,3 +118,31 @@
   font-weight: bold;
   font-family: 'Rubik';
   font-size: 0.7rem;}
+
+
+  @media screen and (max-width: 1200px) {
+    .stores {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .stores {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .search {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .search_input {
+      width: 100%;
+    }
+    .filter_btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .filter_btns button {
+      width: 100%;
+    }
+  }

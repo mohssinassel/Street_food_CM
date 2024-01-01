@@ -20,6 +20,7 @@ import VendorMap from "./pages/VendorMap";
 import LocationInfo from "./components/LocationInfo"; 
 import StorePage from "./pages/StorePage";
 import  stores  from "./utils/stores";
+import ProfileCliet from "./pages/ProfileClient";
 function App() {
   const location = useLocation();
 
@@ -40,6 +41,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<ProfileVendor   />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/profil" element={<ProfileCliet />} />
               <Route path="/becomeVendor" element={<BecomeVendor />} />
               <Route path="/becomeVendor/personal" element={<PersonalInfo />} />
               <Route path="/becomeVendor/store" element={<StoreInfo />} />
