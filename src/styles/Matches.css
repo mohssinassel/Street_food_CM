@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     height: 50px;
+    /* background-color: rgb(251, 243, 239); */
+    box-shadow: 0 3px 6px var(--shadow-color);
 }
 .countries, .timing, .stadium {
     padding: 10px;
