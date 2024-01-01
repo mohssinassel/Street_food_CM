@@ -39,7 +39,7 @@ function App() {
             <Routes>
               {isFirstPage && <Route path="/" element={<FirstPage />} />}
               <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<ProfileVendor   />} />
+              <Route path="/profilVendor" element={<ProfileVendor   />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/profil" element={<ProfileCliet />} />
               <Route path="/becomeVendor" element={<BecomeVendor />} />

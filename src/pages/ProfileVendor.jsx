@@ -15,10 +15,6 @@ import Discount from '../components/Discount';
 
 function ProfileVendor() {
     
-    
-   
-    
-
     const menuList = vendor[0].menu;
     
       console.log(menuList);

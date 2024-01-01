@@ -10,7 +10,7 @@ const ProfileVendorInfo = () =>{
     <>
     <div className="vendor_info_Add_Plat">
     <div className='vendor_info'>
-        <h3 >Store Information</h3>
+        <h3 >Store Informations</h3>
         <div className="vendor_info_div">
             <div>
                 <p>Email</p>

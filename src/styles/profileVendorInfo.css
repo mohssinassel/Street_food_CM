@@ -67,6 +67,7 @@ hr{
     margin: 0 auto;
     border: 0.05rem solid #ccc;
     transition: all 0.5s;
+    /* float: left; */
 }
 .vendor_info p , .titleVendor{
     /* margin: 0 auto; */
