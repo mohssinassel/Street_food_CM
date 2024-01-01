@@ -21,16 +21,17 @@ import {
   faLocationDot,
   faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import StorePopup from "./StorePopup";
 
 export default function Topbar() {
   const [showSidebar, setShowSidebar] = useState(false);
   const links = [
     { name: "Accueil", path: "/home", icon: faHome },
-    { name: "Profile Vendeur", path: "/about", icon: faList },
+    // { name: "Profile Vendeur", path: "/about", icon: faList },
     { name: "Devenir Vendeur", path: "/becomeVendor", icon: faUser },
     { name: "Notifications", path: "/", icon: faBell },
-    // { name: "Profile", path: "/", icon: faUser },
-    { name: "Parametres", path: "/", icon: faCog },
+    { name: "Profile", path: "/profilVendor", icon: faUser },
+    { name: "Parametres", path: "/profil", icon: faCog },
     { name: "SignIn", path: "/signin", icon: faSignInAlt },
     { name: "SignOut", path: "/", icon: faSignOutAlt},
   ];
@@ -39,6 +40,7 @@ export default function Topbar() {
   }
   const [showNotification, setShowNotification] = useState(false);
   const [showAccount, setShowAccount] = useState(false);
+  const [showMap, setShowMap] = useState("");
   function setNotification() {
     setShowNotification(!showNotification);
   }
@@ -163,7 +165,7 @@ export default function Topbar() {
         </Link>
         <div className="nav-links">
           <Link to={"/home"}>Accueil</Link>
-          <Link to={"/about"}>Profile Vendeur</Link>
+          
           <Link to={"/becomeVendor"}>Creer mon Business</Link>
           <Link to={"/signin"}>SignIn</Link>
         </div>
@@ -193,8 +195,8 @@ export default function Topbar() {
         {showAccount && (
           <div className="dropDownNotification profile">
             <ul className="list menu">
-              <li ><Link to={"/profil"} style={{color:'black'}}>Profile</Link></li>
-              <li>Settings</li>
+              <li ><Link to={"/profilVendor"} style={{color:'black'}}>Profile</Link></li>
+              <li><Link to={"/profil"} style={{color:'black'}}>Settings</Link></li>
               <li>Logout</li>
             </ul>
           </div>
@@ -203,7 +205,14 @@ export default function Topbar() {
       {/* <Matches/> */}
       <div className="notification-bar">
       <div className="stadium">
-        <p>
+        <p onClick={(e) => {
+                      e.preventDefault();
+                      setShowMap({
+                        nom_store: "stade mohammed V",
+                        localisation: "33.58193226110629,-7.647313467311904",
+                        });
+                    }}
+            style={{cursor:'pointer'}}>
           <FontAwesomeIcon
             icon={faLocationDot}
             style={{ marginRight: "5px", color: "red" }}
@@ -289,6 +298,12 @@ export default function Topbar() {
       </div>
     </div>
       {showSidebar && <Sidebar links={links} />}
+      {showMap && (
+          <StorePopup
+            store={showMap}
+            onClose={() => setShowMap(null)}
+          />
+        )}
     </>
   );
 }
